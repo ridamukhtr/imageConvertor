@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import FontAwesome from "react-native-vector-icons/FontAwesome";
+import RMText from './RMText';
 
 
 const ViewFlexBox = ({ icon, style, text, iconSize, iconColor, textStyle, onPress }) => {
@@ -10,7 +11,7 @@ const ViewFlexBox = ({ icon, style, text, iconSize, iconColor, textStyle, onPres
                 <View style={[styles.containerBody, style]}>
                     <FontAwesome name={icon} size={iconSize} color={iconColor} />
                 </View>
-                <Text style={[styles.txt1, textStyle]}>{text}</Text>
+                <RMText style={[styles.txt1, textStyle]}>{text}</RMText>
             </TouchableOpacity>
         </>
     )
